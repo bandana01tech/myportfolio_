@@ -26,7 +26,6 @@ SECRET_KEY = 'django-insecure-hkrn9ppmj201iiuviwpod*xz=fjf0l!&p6yh+&!xz))edfss4k
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'myportfolio-01.onrender.com',
     '.onrender.com'
 ]
 
@@ -45,7 +44,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # 👈 ADD THIS
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -122,8 +120,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
